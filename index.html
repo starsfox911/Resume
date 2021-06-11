@@ -24,12 +24,7 @@
         
         <div class="foto_main">
             <div class="foto">
-                <picture>
-                    <source media="(max-width:450px)" srcset="">
-                    <source>
-                    <img src="./img/foto.jpg" alt="">
-                </picture>
-                
+             <img src="./img/foto.jpg" alt="">
             </div>
             <div class="name_age">
                <div class="name"><h4> Пархоменко Дмитрий Николаевич</h4></div>
@@ -51,9 +46,9 @@
 
         <div class="skill">
             <h3>Навыки:</h3>
-            <div>
-                <ul>
-                    <li>HTML5/CSS3</li>
+            <div class="skill_list">
+                <ul id="skill_list">
+                    <!-- <li>HTML5/CSS3</li>
                     <li>Layout Flex-Box</li>
                     <li>Layout Grid</li>
                     <li>Bootstrap</li>
@@ -68,7 +63,7 @@
                     <li>Создания HTML-страницы сайта на ТЗ</li>
                     <li>Знание PhotoShop</li>
                     <li>Знание Figma</li>
-                    <li>Уровень английского: Elementary</li>
+                    <li>Уровень английского: Elementary</li> -->
                 </ul>
             </div>
         </div>
@@ -96,9 +91,8 @@
 
         <div class="my_jobs">
             <h4>Мои работы:</h4>
-            <ul>
-                <li><a href="https://starsfox911.github.io/Auto_Blog/" target="_blank" rel="noopener noreferrer">Авто</a></li>
-                <li><a href="https://starsfox911.github.io/Builder/" target="_blank" rel="noopener noreferrer">Строй</a></li>
+            <ul id="my_jobs">
+                
                 
             </ul>
 
@@ -106,14 +100,82 @@
 
 
     </div>
-    <footer>
-
-    </footer>
-
-
-
- 
     
+
+
+
+  
+    <script>
+
+        const my_jobs = document.getElementById('my_jobs');
+        const skill_list = document.getElementById('skill_list');
+        const i_am = {
+            name:"Дмитрий",
+            jobs:{
+                link_name: [
+                'Auto_Blog',    
+                'Builder',      
+                'Aesop',        
+                'online_course',
+                ],
+
+                link_src:[ 
+                    'https://starsfox911.github.io/Auto_Blog/',
+                    'https://starsfox911.github.io/Builder/',
+                    'https://starsfox911.github.io/Aesop/',
+                    'https://starsfox911.github.io/online-course/'
+                ]
+            }
+                        
+        };
+        const skill = [ 
+                  "HTML5/CSS3                        ",
+                  "Layout Flex-Box                   ",          
+                  "Layout Grid                       ",            
+                  "Bootstrap                         ",            
+                  "JavaScript/JQuery                 ",            
+                  "ООП",
+                  "Адаптивная верстка                ",            
+                  "JSON/open API                     ",            
+                  "NodeJS                            ",          
+                  "React                             ",       
+                  "Angularjs                         ",            
+                  "LESS/SASS/                        ",            
+                  "Создания HTML-страницы сайта на ТЗ",
+                  "Знание PhotoShop                  ",            
+                  "Знание Figma                      ",            
+                  "Уровень английского Elementary"
+
+        ]
+       
+        
+             
+         function loading() { 
+            for (let i = 0; i < i_am.jobs.link_name.length; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = '<a href="' + i_am.jobs.link_src[i]  + ' "   target="_blank" rel="noopener noreferrer"> '+  i_am.jobs.link_name[i]  + '</a>';
+                my_jobs.append(li);
+                           
+            }
+
+            for (let i = 0; i < skill.length; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = skill[i] ;
+                skill_list.append(li);
+                           
+            }
+           
+        }
+
+
+        loading()
+
+
+
+        
+            
+
+    </script>
     
 </body>
 </html>
