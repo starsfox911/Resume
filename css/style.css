@@ -106,7 +106,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0px 10px 10px 10px ;
+  padding: 0px 10px 10px 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -177,20 +177,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 0px;
-          flex: 0 0 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 320px;
   max-width: 410px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px;
 }
 .my_jobs ul li {
   list-style: none;
@@ -243,7 +237,7 @@ body {
     display: grid;
   }
   .skill ul {
-    padding: 0px 10px 0px 10px ;
+    padding: 0px 10px 0px 10px;
     margin: 0;
   }
 }
